@@ -70,6 +70,13 @@ public class PropertyCell extends Cell {
 		return rentToCharge;
 	}
 
+	/**
+	 * Calculate monopolies rent.
+	 *
+	 * @param rentToCharge the rent to charge
+	 * @param monopolies the monopolies
+	 * @return the int
+	 */
 	private int calculateMonopoliesRent(int rentToCharge, String[] monopolies) {
 		for(int i = 0; i < monopolies.length; i++) {
 			if(monopolies[i].equals(colorGroup)) {
