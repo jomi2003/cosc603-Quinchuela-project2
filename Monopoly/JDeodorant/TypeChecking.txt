@@ -1,0 +1,3 @@
+edu.towson.cis.cosc603.project2.monopoly.GameMaster::public void playerMoved(edu.towson.cis.cosc603.project2.monopoly.Player) 
+edu.towson.cis.cosc603.project2.monopoly.GameMaster::public edu.towson.cis.cosc603.project2.monopoly.Card btnDrawCardClicked() 
+edu.towson.cis.cosc603.project2.monopoly.GameBoard::public void addCard(edu.towson.cis.cosc603.project2.monopoly.Card) 

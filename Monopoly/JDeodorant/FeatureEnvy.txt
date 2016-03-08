@@ -1,0 +1,7 @@
+Refactoring Type	Source Entity	Target Class	Entity Placement	Rate it!
+Move Method	edu.towson.cis.cosc603.project2.monopoly.GameMaster::completeTrade(edu.towson.cis.cosc603.project2.monopoly.TradeDeal):void	edu.towson.cis.cosc603.project2.monopoly.TradeDeal	0.950097610900369	
+Move Method	edu.towson.cis.cosc603.project2.monopoly.GameMaster::btnDrawCardClicked():edu.towson.cis.cosc603.project2.monopoly.Card	edu.towson.cis.cosc603.project2.monopoly.GameBoard	0.9520074034571981	
+Move Method	edu.towson.cis.cosc603.project2.monopoly.GameMaster::sendToJail(edu.towson.cis.cosc603.project2.monopoly.Player):void	edu.towson.cis.cosc603.project2.monopoly.GameBoard	0.9521322388864899	
+	current system		0.9522011694425777	
+Move Method	edu.towson.cis.cosc603.project2.monopoly.GameMaster::movePlayer(edu.towson.cis.cosc603.project2.monopoly.Player, int):void	edu.towson.cis.cosc603.project2.monopoly.GameBoard	0.9522201276360646	
+Move Method	edu.towson.cis.cosc603.project2.monopoly.gui.PlayerPanel::displayInfo():void	edu.towson.cis.cosc603.project2.monopoly.Player	0.9522806670362275	

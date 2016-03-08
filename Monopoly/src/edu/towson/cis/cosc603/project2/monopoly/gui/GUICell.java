@@ -10,19 +10,18 @@ import edu.towson.cis.cosc603.project2.monopoly.*;
 public class GUICell extends JPanel {
 
 	
+	private GUICellProduct gUICellProduct = new GUICellProduct();
 	private static final long serialVersionUID = 1L;
 	private IOwnable cell;
 	private JLabel lblInfo;
-	private JLabel[] lblPlayers = new JLabel[GameMaster.MAX_PLAYER];
-	
-    public GUICell(IOwnable cell) {
+	public GUICell(IOwnable cell) {
         this.cell = cell;
         setLayout(new OverlayLayout(this));
         setBorder(new BevelBorder(BevelBorder.LOWERED));
         JPanel pnlPlayer = new JPanel();
         pnlPlayer.setLayout(new GridLayout(2, 4));
         pnlPlayer.setOpaque(false);
-        createPlayerLabels(pnlPlayer);
+        gUICellProduct.createPlayerLabels(pnlPlayer);
         add(pnlPlayer);
         setPreferredSize(new Dimension(100,100));
         addCellInfo();
@@ -39,20 +38,10 @@ public class GUICell extends JPanel {
     }
 	
 	public void addPlayer(int index) {
-		Player player = GameMaster.instance().getPlayer(index);
-		lblPlayers[index].setText(player.getName().substring(0, 1));
-		lblPlayers[index].setOpaque(true);
+		gUICellProduct.addPlayer(index);
 	}
 
-    private void createPlayerLabels(JPanel pnlPlayer) {
-		for (int i = 0; i < GameMaster.MAX_PLAYER; i++) {
-			lblPlayers[i] = new JLabel();
-			lblPlayers[i].setBackground(Color.GREEN);
-			pnlPlayer.add(lblPlayers[i]);
-		}
-	}
-
-	public void displayInfo() {
+    public void displayInfo() {
 		lblInfo.setText(InfoFormatter.cellInfo(cell));
         this.invalidate();
 		this.repaint();
@@ -63,8 +52,6 @@ public class GUICell extends JPanel {
 	}
 	
 	public void removePlayer(int index) {
-		lblPlayers[index].setText("");
-		lblPlayers[index].setOpaque(false);
-        this.repaint();
+		gUICellProduct.removePlayer(index, this);
 	}
 }
